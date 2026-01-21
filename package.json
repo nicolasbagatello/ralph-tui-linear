@@ -1,0 +1,53 @@
+{
+  "name": "ralph-tui-linear",
+  "version": "1.0.0",
+  "description": "Linear tracker plugin for ralph-tui - two-way sync with Linear issues",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "ralph-tui-linear-setup": "./scripts/setup-linear.sh",
+    "ralph-tui-linear-install": "./scripts/install.sh"
+  },
+  "scripts": {
+    "build": "bun build ./src/index.ts --outdir ./dist --target bun --sourcemap=external && cp src/template.hbs dist/",
+    "build:types": "tsc --emitDeclarationOnly --declaration --outDir dist",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "postinstall": "node scripts/postinstall.js",
+    "test": "bun test"
+  },
+  "files": [
+    "dist",
+    "scripts"
+  ],
+  "keywords": [
+    "ralph-tui",
+    "linear",
+    "task-tracker",
+    "plugin",
+    "ai-agent"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/subsy/ralph-tui-linear.git"
+  },
+  "homepage": "https://github.com/subsy/ralph-tui-linear#readme",
+  "bugs": {
+    "url": "https://github.com/subsy/ralph-tui-linear/issues"
+  },
+  "peerDependencies": {
+    "ralph-tui": ">=0.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "bun-types": "^1.1.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "bun": ">=1.0.0",
+    "node": ">=18.0.0"
+  }
+}
