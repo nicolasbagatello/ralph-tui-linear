@@ -1,0 +1,76 @@
+{{!--
+  ABOUTME: Linear tracker prompt template.
+  Context-first structure: Epic/PRD → Patterns → Task → Workflow
+
+  Users can customize this template by copying to:
+  - Project: .ralph-tui/templates/linear.hbs
+  - Global: ~/.config/ralph-tui/templates/linear.hbs
+--}}
+
+{{!-- Epic/PRD context for project understanding --}}
+{{#if prdContent}}
+## Project Context
+
+We are working on the following feature/epic:
+
+{{prdContent}}
+
+---
+{{/if}}
+
+{{!-- Task details --}}
+## Your Task: {{taskId}}
+### {{taskTitle}}
+
+{{#if taskDescription}}
+### Description
+{{taskDescription}}
+{{/if}}
+
+{{#if acceptanceCriteria}}
+### Acceptance Criteria
+{{acceptanceCriteria}}
+{{/if}}
+
+{{#if notes}}
+### Notes
+{{notes}}
+{{/if}}
+
+{{#if dependsOn}}
+**Prerequisites**: {{dependsOn}}
+{{/if}}
+
+{{#if recentProgress}}
+## Recent Progress
+{{recentProgress}}
+{{/if}}
+
+## Workflow
+1. Study the epic/PRD context above to understand the bigger picture
+2. Study `.ralph-tui/progress.md` for status, implementation progress, and learnings
+3. Implement this single task following acceptance criteria
+4. Run quality checks: typecheck, lint, tests
+5. Commit with message: `feat: {{taskId}} - {{taskTitle}}`
+6. Document learnings (see below)
+7. Signal completion
+
+## Before Completing
+APPEND to `.ralph-tui/progress.md`:
+```
+## [Date] - {{taskId}}
+- What was implemented
+- Files changed
+- **Learnings:**
+  - Patterns discovered
+  - Gotchas encountered
+---
+```
+
+If you discovered a **reusable pattern**, also add it to the `## Codebase Patterns` section at the TOP of progress.md.
+
+## Stop Condition
+**IMPORTANT**: If the work is already complete (implemented in a previous iteration or already exists), verify it meets the acceptance criteria and signal completion immediately.
+
+When finished (or if already complete), signal completion with:
+<promise>COMPLETE</promise>
