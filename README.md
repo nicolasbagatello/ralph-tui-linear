@@ -69,6 +69,26 @@ ls ~/.config/ralph-tui/plugins/trackers/linear.js
 which ralph-tui-linear-setup
 ```
 
+## Uninstalling
+
+To completely remove ralph-tui-linear:
+
+```bash
+# Run the uninstall script
+ralph-tui-linear-uninstall
+
+# Or manually:
+rm ~/.config/ralph-tui/plugins/trackers/linear.js
+rm ~/.config/ralph-tui/plugins/trackers/linear-template.hbs
+npm uninstall -g ralph-tui-linear
+```
+
+The uninstall script will:
+1. Remove plugin files from `~/.config/ralph-tui/plugins/trackers/`
+2. Optionally remove `LINEAR_*` environment variables from your shell profile
+3. Optionally delete the Linear webhook (if configured)
+4. Uninstall the npm package
+
 ## Quick Start
 
 ```bash
@@ -322,6 +342,7 @@ ralph-tui-linear/
 │   └── template.hbs   # Prompt template
 ├── scripts/
 │   ├── install.sh         # Automated installer (checks ralph-tui, installs plugin, runs setup)
+│   ├── uninstall.sh       # Cleanup script (removes plugin, env vars, webhook)
 │   ├── setup-linear.sh    # Interactive Linear configuration wizard
 │   └── postinstall.js     # Auto-install to ralph-tui plugins (runs on npm install)
 ├── dist/              # Built output
@@ -335,6 +356,7 @@ ralph-tui-linear/
 |---------|-------------|
 | `ralph-tui-linear-install` | Full automated installation |
 | `ralph-tui-linear-setup` | Configure Linear API, team, project |
+| `ralph-tui-linear-uninstall` | Remove plugin and cleanup |
 | `bun run build` | Build the plugin |
 | `bun run typecheck` | Run TypeScript type checking |
 | `bun test` | Run tests |

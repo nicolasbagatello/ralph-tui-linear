@@ -7,7 +7,8 @@
   "types": "./dist/index.d.ts",
   "bin": {
     "ralph-tui-linear-setup": "./scripts/setup-linear.sh",
-    "ralph-tui-linear-install": "./scripts/install.sh"
+    "ralph-tui-linear-install": "./scripts/install.sh",
+    "ralph-tui-linear-uninstall": "./scripts/uninstall.sh"
   },
   "scripts": {
     "build": "bun build ./src/index.ts --outdir ./dist --target bun --sourcemap=external && cp src/template.hbs dist/",
