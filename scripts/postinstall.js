@@ -193,7 +193,7 @@ ${BOLD}Next steps:${NC}
 ${BOLD}Resources:${NC}
   - ralph-tui docs: ${CYAN}https://ralph-tui.com/docs/getting-started/quick-start${NC}
   - ralph-tui repo: ${CYAN}https://github.com/subsy/ralph-tui${NC}
-  - This plugin:    ${CYAN}https://github.com/subsy/ralph-tui-linear${NC}
+  - This plugin:    ${CYAN}https://github.com/nicolasbagatello/ralph-tui-linear${NC}
 `);
 
   } catch (err) {

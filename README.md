@@ -30,10 +30,10 @@ Download and run the automated installer:
 
 ```bash
 # Using curl
-curl -fsSL https://raw.githubusercontent.com/subsy/ralph-tui-linear/main/scripts/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/nicolasbagatello/ralph-tui-linear/main/scripts/install.sh | bash
 
 # Or using wget
-wget -qO- https://raw.githubusercontent.com/subsy/ralph-tui-linear/main/scripts/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/nicolasbagatello/ralph-tui-linear/main/scripts/install.sh | bash
 ```
 
 The installer will:
@@ -292,7 +292,7 @@ Your Project/
 
 ```bash
 # Clone the repository
-git clone https://github.com/subsy/ralph-tui-linear.git
+git clone https://github.com/nicolasbagatello/ralph-tui-linear.git
 cd ralph-tui-linear
 
 # Install dependencies

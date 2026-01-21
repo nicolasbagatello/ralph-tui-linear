@@ -276,7 +276,7 @@ print_complete() {
     print_info "Resources:"
     echo -e "  - ralph-tui docs:  ${CYAN}https://ralph-tui.com/docs/getting-started/quick-start${NC}"
     echo -e "  - ralph-tui repo:  ${CYAN}https://github.com/subsy/ralph-tui${NC}"
-    echo -e "  - Plugin repo:     ${CYAN}https://github.com/subsy/ralph-tui-linear${NC}"
+    echo -e "  - Plugin repo:     ${CYAN}https://github.com/nicolasbagatello/ralph-tui-linear${NC}"
     echo ""
 }
 
@@ -329,7 +329,7 @@ case "${1:-}" in
         echo "Resources:"
         echo "  https://ralph-tui.com/docs/getting-started/quick-start"
         echo "  https://github.com/subsy/ralph-tui"
-        echo "  https://github.com/subsy/ralph-tui-linear"
+        echo "  https://github.com/nicolasbagatello/ralph-tui-linear"
         exit 0
         ;;
     --skip-setup)

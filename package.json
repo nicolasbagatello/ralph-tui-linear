@@ -32,11 +32,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/subsy/ralph-tui-linear.git"
+    "url": "https://github.com/nicolasbagatello/ralph-tui-linear.git"
   },
-  "homepage": "https://github.com/subsy/ralph-tui-linear#readme",
+  "homepage": "https://github.com/nicolasbagatello/ralph-tui-linear#readme",
   "bugs": {
-    "url": "https://github.com/subsy/ralph-tui-linear/issues"
+    "url": "https://github.com/nicolasbagatello/ralph-tui-linear/issues"
   },
   "peerDependencies": {
     "ralph-tui": ">=0.3.0"
